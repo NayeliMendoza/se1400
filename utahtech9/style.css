@@ -69,7 +69,8 @@ h3 {
 #homehero,
 #studenthero,
 #facultyhero,
-#alumnihero {
+#alumnihero,
+#shophero {
   height: 300px;
   background-size: cover;
   background-position: center;
@@ -80,6 +81,7 @@ h3 {
 #studenthero { background-image: url(studenthero.jpg); }
 #facultyhero { background-image: url(facultyhero.jpg); }
 #alumnihero { background-image: url(alumnihero.jpg); }
+#shophero { background-image: url(shophero.jpg); }
 
 header {
   grid-row: 1 / 2;
@@ -99,7 +101,8 @@ nav {
 #homehero,
 #studenthero,
 #facultyhero,
-#alumnihero {
+#alumnihero,
+#shophero {
   grid-row: 3 / 4;
   grid-column: 2 / -2;
 }
@@ -174,7 +177,8 @@ video {
 #homehero,
 #studenthero,
 #facultyhero,
-#alumnihero {
+#alumnihero,
+#shophero {
   grid-column: 1 / -1;
 }
 
@@ -237,7 +241,8 @@ video {
   #homehero,
   #studenthero,
   #facultyhero,
-  #alumnihero {
+  #alumnihero,
+  #shophero {
     grid-row: 2 / 3;
     grid-column: 5 / 8;
     height: auto;
@@ -279,7 +284,8 @@ video {
   #homehero,
   #studenthero,
   #facultyhero,
-  #alumnihero {
+  #alumnihero,
+  #shophero {
     display: none;
   }
 
