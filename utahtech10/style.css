@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #eeeeee, #ffffff);
+  background-attachment: fixed;
+  color: #666666;
+  font-family: Verdana, Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #003058;
+  color: #FFFFFF;
+  font-family: Georgia, serif;
+}
+
+header h1 {
+  line-height: 140%;
+  padding: .5rem;
+  background-image: url(utahtechlogo.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  padding-left: 1em;
+  background-origin: content-box;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+h2 {
+  color: #424242;
+  font-family: Georgia, serif;
+}
+
+dt {
+  color: #003058;
+  font-weight: bold;
+}
+
+.ut {
+  color: #BA1C21;
+  font-weight: bold;
+}
+
+footer {
+  font-size: .70rem;
+  font-style: italic;
+  text-align: center;
+}
+
+#wrapper {
+  display: grid;
+  grid-auto-rows: minmax(0px, auto);
+  grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+main {
+  padding: 0 2rem;
+}
+
+h3 {
+  color: #003058;
+}
+
+#homehero,
+#studenthero,
+#facultyhero,
+#alumnihero,
+#shophero {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#homehero { background-image: url(homehero.jpg); }
+#studenthero { background-image: url(studenthero.jpg); }
+#facultyhero { background-image: url(facultyhero.jpg); }
+#alumnihero { background-image: url(alumnihero.jpg); }
+#shophero { background-image: url(shophero.jpg); }
+
+header {
+  grid-row: 1 / 2;
+  grid-column: 2 / -2;
+}
+
+nav {
+  grid-row: 2 / 3;
+  grid-column: 2 / -2;
+  background-color: #424242;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+}
+
+#homehero,
+#studenthero,
+#facultyhero,
+#alumnihero,
+#shophero {
+  grid-row: 3 / 4;
+  grid-column: 2 / -2;
+}
+
+main {
+  grid-row: 4 / 5;
+  grid-column: 2 / -2;
+  background-color: #ffffff;
+}
+
+footer {
+  grid-row: 5 / 6;
+  grid-column: 2 / -2;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+}
+
+nav ul li {
+  width: 100%;
+}
+
+nav a {
+  color: #FFFFFF;
+  padding: 1rem 0rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease-out;
+}
+
+nav a:hover {
+  background-color: #BA1C21;
+}
+
+header a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* This targets standard page images */
+main img {
+  float: right;
+  padding-left: 2rem;
+}
+
+video {
+  float: right;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  max-width: 100%;
+  height: auto;
+}
+
+#bluebar {
+  background-color: #003058;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+#greybar {
+  background-color: #424242;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+}
+
+#homehero,
+#studenthero,
+#facultyhero,
+#alumnihero,
+#shophero {
+  grid-column: 1 / -1;
+}
+
+/* =========================================
+   NEW SHOP SPECIFIC STYLES (TASK 1-4)
+   ========================================= */
+
+/* 1. Descendant selector for shopping images */
+#shoppingcart img {
+  width: 100%;
+  height: auto;
+  float: none;   /* CRITICAL: Fixes the 'too big' float issue */
+  padding: 0;    /* Removes global main img padding */
+}
+
+/* 2. Grid layout: 3 columns */
+#shoppingcart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for individual product containers */
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.price {
+  font-weight: bold;
+  color: #BA1C21;
+}
+
+/* =========================================
+   MEDIA QUERIES (UPDATED FOR SHOP)
+   ========================================= */
+
+@media only screen and (max-width: 1100px) {
+  #wrapper {
+    grid-template-columns: 1fr repeat(6, minmax(0, 150px)) 1fr;
+  }
+}
+
+/* 3. At 900px: Change grid to 2 columns */
+@media only screen and (max-width: 900px) {
+  nav {
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+    position: static;
+  }
+
+  nav ul {
+    flex-flow: column nowrap;
+  }
+
+  #homehero,
+  #studenthero,
+  #facultyhero,
+  #alumnihero,
+  #shophero {
+    grid-row: 2 / 3;
+    grid-column: 5 / 8;
+    height: auto;
+  }
+
+  /* This stays for your other pages */
+  main img {
+    float: none;
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+  }
+
+  /* Task 3: Shop grid update */
+  #shoppingcart {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  video {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 4. At 600px: Change grid to 1 column */
+@media only screen and (max-width: 600px) {
+  header h1 {
+    background-image: none;
+    text-align: center;
+  }
+
+  nav {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+
+  #homehero,
+  #studenthero,
+  #facultyhero,
+  #alumnihero,
+  #shophero {
+    display: none;
+  }
+
+  /* Task 4: Shop grid update */
+  #shoppingcart {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   OTHER STYLES (ALUMNI & TABLES)
+   ========================================= */
+form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 200px 1fr;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+form label { padding: 10px; text-align: right; }
+form input, form textarea { font-size: 1rem; padding: 10px; color: #666666; background-color: #fafafa; border: none; }
+form input:focus, form textarea:focus { outline: none; background-color: #f0f0f0; }
+form textarea { resize: vertical; min-height: 80px; }
+
+#mySubmit {
+  width: 10rem;
+  grid-column: 2 / 3;
+  margin-top: 0.5rem;
+  padding: 10px;
+  background-color: #003058;
+  color: #ffffff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#mySubmit:hover { background-color: #BA1C21; }
+
+table {
+  margin: 0 auto;
+  border: 1px solid #424242;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th { padding: 5px; border: 1px solid #424242; }
+td { text-align: center; }
+.text { text-align: left; }
+tr:nth-of-type(even) { background-color: #F3F3F3; }
+/* Fix for the Hero image on the Shop page */
+#hero img {
+  width: 100%;
+  height: auto;
+  float: none;   /* Stops it from floating to the right */
+  padding: 0;    /* Removes the extra gap */
+  display: block;
+}
+header h1 {
+  line-height: 140%;
+  padding: .5rem;
+  background-image: url(utahtechlogo.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-left: 1em;
+  background-origin: content-box;
+  margin: 0;
+  
+  /* ADD THESE TWO LINES - They shrink the giant logo */
+  background-size: contain; 
+  height: 80px; 
+}
