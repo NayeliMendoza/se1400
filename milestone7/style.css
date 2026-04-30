@@ -271,35 +271,465 @@ input:focus, textarea:focus {
     width: 100%;
   }
 }
-/* ===== MENU PAGE STYLES (SAFE ADD) ===== */
+/* --- GLOBAL & PRETTY FONTS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fffafb;
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* NAVBAR: Centered and Elegant */
+header {
+    background-color: #fff;
+    padding: 30px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #555;
+    transition: 0.3s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: #d63384;
+    border-bottom: 1px solid #d63384;
+}
+
+/* HERO SECTION */
+.about-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+}
+
+.luxury-label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    color: #d63384;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin: 10px 0;
+}
+
+.about-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #666;
+}
+
+/* THE FLOATING CARDS (From your image!) */
+.values-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 5%;
+}
+
+.floating-card {
+    background: #fff;
+    width: 320px;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.floating-card:hover {
+    transform: translateY(-15px); /* Card lifts up */
+    box-shadow: 0 20px 40px rgba(214, 51, 132, 0.1);
+    border-bottom: 4px solid #d63384; /* Pink line at bottom */
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.floating-card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    color: #2d2d2d;
+}
+
+/* DETAILED TEXT BOX */
+.info-content-box {
+    max-width: 850px;
+    margin: 40px auto;
+    background: #fff5f7;
+    padding: 60px;
+    border-radius: 15px;
+}
+
+.info-content-box h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.boutique-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    border: 1px solid #d63384;
+    color: #d63384;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.boutique-btn:hover {
+    background: #d63384;
+    color: #fff;
+}
+
+.luxury-divider {
+    margin: 20px 0;
+    color: #d63384;
+}
+
+footer {
+    text-align: center;
+    padding: 60px;
+    font-size: 0.9rem;
+}
+nav a.active {
+    color: #d63384 !important;
+    font-weight: bold;
+    border-bottom: 2px solid #d63384;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+/* This makes the other links turn pink ONLY when you hover over them */
+nav a:hover {
+    color: #d63384;
+}
+/* --- MENU PAGE STYLES --- */
 
 .menu-container {
-  padding: 40px;
-  text-align: center;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-.menu-title {
-  font-size: 32px;
-  margin-bottom: 25px;
+.menu-intro {
+    text-align: center;
+    margin-bottom: 80px;
 }
 
-.menu-section {
-  margin-bottom: 35px;
+.category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #d63384;
+    text-align: center;
+    margin: 60px 0 30px;
+    letter-spacing: 1px;
 }
 
-.menu-section h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-.menu-item {
-  font-size: 18px;
-  margin: 6px 0;
+/* THE FLOATING CARD LOOK */
+.menu-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
 }
 
-.order-button {
-  margin-top: 25px;
-  padding: 12px 25px;
-  border-radius: 25px;
-  cursor: pointer;
+.menu-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 3px solid #d63384;
+    box-shadow: 0 15px 40px rgba(214, 51, 132, 0.1);
+}
+
+.menu-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.menu-card p {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.price {
+    font-weight: 600;
+    color: #d63384;
+    font-size: 1.1rem;
+}
+
+/* CUSTOM ORDERS BOX */
+.custom-orders {
+    margin-top: 100px;
+    background-color: #fff5f7;
+    padding: 60px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: 1px solid #d63384;
+    color: #d63384;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+/* --- GALLERY STYLES --- */
+.gallery-page {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.gallery-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* THE GALLERY GRID */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 350px;
+    gap: 20px;
+}
+
+/* INDIVIDUAL IMAGE CARDS */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* OVERLAY EFFECT: Shows text when you hover over images */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    text-align: center;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* STORY CARDS (The interesting text boxes!) */
+.gallery-story-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #fce4ec;
+}
+
+.gallery-story-card.highlight {
+    background: #fff5f7;
+    border-left: 4px solid #d63384;
+}
+
+.gallery-story-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+/* LARGE GRID ITEM */
+.gallery-item.large {
+    grid-row: span 2;
+}
+
+/* SOCIAL BUTTON */
+.gallery-social {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.social-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    border: 1px solid #d63384;
+    color: #d63384;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: #d63384;
+    color: #fff;
+}
+/* --- CONTACT PAGE STYLES --- */
+.contact-page {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* LEFT SIDE INFO CARDS */
+.contact-info-cards {
+    flex: 1;
+    display: grid;
+    gap: 20px;
+}
+
+.info-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border-left: 4px solid #d63384;
+}
+
+.info-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* RIGHT SIDE FORM */
+.contact-form-section {
+    flex: 1.2;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.05);
+}
+
+.pretty-form h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+    color: #d63384;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #d63384;
+    background: #fff;
+}
+
+.submit-btn {
+    background: #d63384;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #b02a6b;
+    transform: translateY(-3px);
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 850px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
 }
