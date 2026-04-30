@@ -1,0 +1,305 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fffaf7;
+  color: #444;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 35px;
+  background: linear-gradient(to right, #f8d8d8, #fdeee8);
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  color: #6b3e3e;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #8a6b65;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 18px;
+  background: white;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+}
+
+nav a {
+  text-decoration: none;
+  color: #6b4f4f;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #d87093;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  color: #d87093;
+}
+
+.hero p {
+  line-height: 1.8;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+}
+
+/* BUTTON */
+button {
+  background: #d87093;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #c45c80;
+}
+
+/* CATEGORIES */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.category-box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+/* BESTSELLERS */
+.bestsellers {
+  text-align: center;
+  padding: 50px;
+}
+
+.bestsellers h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.item {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-8px);
+}
+
+.item h3 {
+  color: #d87093;
+}
+
+/* SPECIALS */
+.specials {
+  text-align: center;
+  background: #fdeee8;
+  padding: 40px;
+}
+
+/* REVIEWS */
+.reviews {
+  text-align: center;
+  padding: 50px;
+}
+
+.review-box {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ABOUT */
+.about-section {
+  text-align: center;
+  padding: 50px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #f8d8d8;
+}
+/* FORM PAGE STYLING */
+.form-page {
+  padding: 80px 10%;
+  background-color: #fef9f6; /* Warm cream background */
+}
+
+.form-page h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #5c3d3d;
+}
+
+.form-instruction {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* The Grid Form */
+form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 160px 1fr; /* Exact label alignment */
+  grid-gap: 1.2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+label {
+  padding: 10px;
+  text-align: right;
+  font-weight: 700;
+  color: #5c3d3d;
+  font-size: 0.9rem;
+}
+
+input, textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 12px;
+  color: #4a4a4a;
+  background-color: #fafafa;
+  border: 1px solid #f0e0d9;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Pseudo-selector Focus effect */
+input:focus, textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #c97b84; /* Soft pink border highlight */
+  box-shadow: 0 0 8px rgba(201, 123, 132, 0.2);
+}
+
+#mySubmit {
+  grid-column: 2 / 3; /* Aligns button with inputs */
+  width: 14rem;
+  background-color: #c97b84; /* Your brand pink */
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+#mySubmit:hover {
+  background-color: #b4636d;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustment for phones */
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+  label {
+    text-align: left;
+    padding-bottom: 0;
+  }
+  #mySubmit {
+    grid-column: 1;
+    width: 100%;
+  }
+}
+/* ===== MENU PAGE STYLES (SAFE ADD) ===== */
+
+.menu-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.menu-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.menu-section {
+  margin-bottom: 35px;
+}
+
+.menu-section h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.order-button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}

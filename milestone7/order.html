@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Order Now | Élite Sweets 🍰</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Professional Google Fonts -->
+  <link href="https://googleapis.com" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Élite Sweets 🍰</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="form-page">
+  <div class="container">
+    <h2>Custom Order Request 🧁✨</h2>
+    <p class="form-instruction">We can't wait to bake for you! Required fields are marked with (*). 🎀</p>
+
+    <!-- Form configured for server-side processing -->
+    <form method="post" action="https://flitchbeta.com">
+      
+      <label for="myFName">👤 * First Name:</label>
+      <input type="text" name="myFName" id="myFName" required placeholder="Your lovely name">
+
+      <label for="myLName">🍰 * Last Name:</label>
+      <input type="text" name="myLName" id="myLName" required placeholder="Your last name">
+
+      <label for="myEmail">💌 * E-mail:</label>
+      <input type="email" name="myEmail" id="myEmail" required placeholder="hello@sweetness.com">
+
+      <label for="myPhone">📞 Phone:</label>
+      <input type="tel" name="myPhone" id="myPhone" placeholder="(435) 000-0000">
+
+      <!-- Required Pickup Date -->
+      <label for="myDate">📅 * Pickup Date:</label>
+      <input type="date" name="myDate" id="myDate" required>
+
+      <!-- Required Pickup Time -->
+      <label for="myTime">⏰ * Pickup Time:</label>
+      <input type="time" name="myTime" id="myTime" required>
+
+      <!-- Refined Strawberry Label -->
+      <label for="myComments">🍓 * What can we bake for you?:</label>
+      <textarea name="myComments" id="myComments" rows="4" required placeholder="Ex: I'd love a dozen vanilla cupcakes with pink frosting!"></textarea>
+
+      <input type="submit" value="Submit Order 💕" id="mySubmit">
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Élite Sweets | Fresh pastries made daily with love 🥐✨</p>
+</footer>
+
+</body>
+</html>
